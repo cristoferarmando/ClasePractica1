@@ -1,4 +1,63 @@
 $colorfondo:white;
 $colorsecundario:blue;
+$colorfondoterc:lightblue;
 $colortexto:red;
 $colortextosec:black;
+$fontsizebase:20px;
+
+//Declaración de mixin
+@mixin Flex2 ($FlexDir, $Align){
+        display: flex;
+        flex-direction: $FlexDir;//row;
+        flex-wrap: wrap;
+        justify-content: $Align;//space-around;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    font-size: $fontsizebase;
+}
+
+header{
+    background-color: $colorfondoterc;
+    display: flex;
+    justify-content: center;
+
+    h1{
+        color:$colortexto;
+        font-size: $fontsizebase *2;
+    }
+}
+
+.menuprincipal{
+    background-color: $colorsecundario;
+
+    ul{
+       //Incluyendo mixin declarado anteriormente
+        @include Flex2(row, space-around);
+
+        a{
+            color: $colortextosec;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.seccionprincipal{
+    display: grid;
+
+    .submenu{
+        @include Flex2(row, space-around)
+    }
+
+    .menudetalle{
+        @include Flex2(row, space-around)
+    }
+}
