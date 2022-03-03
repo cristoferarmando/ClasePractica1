@@ -53,11 +53,29 @@ header{
 .seccionprincipal{
     display: grid;
 
+    grid-template-areas: "titulo         menuseccion"
+                         "descripcion    imagen"
+                         "menudetalle    menudetalle";
+
+    .titulodetalle{
+        grid-area: titulo;
+    }
+
     .submenu{
+        grid-area: menuseccion;
         @include Flex2(row, space-around)
     }
 
+    .descrip{
+        grid-area: descripcion;
+    }
+
+    .imgdescrip{
+        grid-area: imagen;
+    }
+
     .menudetalle{
+        grid-area: menudetalle;
         @include Flex2(row, space-around)
     }
 }

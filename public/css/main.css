@@ -52,9 +52,19 @@ header h1 {
 .seccionprincipal {
   display: -ms-grid;
   display: grid;
+      grid-template-areas: "titulo         menuseccion" "descripcion    imagen" "menudetalle    menudetalle";
+}
+
+.seccionprincipal .titulodetalle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
 }
 
 .seccionprincipal .submenu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menuseccion;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +78,23 @@ header h1 {
       justify-content: space-around;
 }
 
+.seccionprincipal .descrip {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: descripcion;
+}
+
+.seccionprincipal .imgdescrip {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: imagen;
+}
+
 .seccionprincipal .menudetalle {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: menudetalle;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
