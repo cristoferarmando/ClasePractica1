@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Road+Rage&family=Rokkitt:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 * {
   margin: 0%;
   padding: 0%;
@@ -12,7 +15,7 @@
 }
 
 header {
-  background-color: lightblue;
+  background-color: #57bd9e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,12 +25,13 @@ header {
 }
 
 header h1 {
-  color: red;
+  color: white;
   font-size: 40px;
+  font-family: 'Carter One', cursive;
 }
 
 .menuprincipal {
-  background-color: blue;
+  background-color: #009d71;
 }
 
 .menuprincipal ul {
@@ -45,11 +49,19 @@ header h1 {
 }
 
 .menuprincipal ul a {
-  color: black;
+  color: #066d8b;
   font-size: 1.5rem;
+  font-family: 'Road Rage', cursive;
+}
+
+.menuprincipal ul a:hover {
+  color: #57bd9e;
 }
 
 .seccionprincipal {
+  background-color: #57bd9e;
+  margin: 5%;
+  border-radius: 10px;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "titulo         menuseccion" "descripcion    imagen" "menudetalle    menudetalle";
@@ -59,12 +71,20 @@ header h1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: titulo;
+  margin: 1%;
+  padding: 2%;
+  font-family: 'Carter One', cursive;
+  color: white;
 }
 
 .seccionprincipal .submenu {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: menuseccion;
+  margin: 2%;
+  padding: 2%;
+  font-family: 'Road Rage', cursive;
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,10 +98,24 @@ header h1 {
       justify-content: space-around;
 }
 
+.seccionprincipal .submenu a {
+  color: #066d8b;
+  font-size: 1.5rem;
+  font-family: 'Road Rage', cursive;
+}
+
+.seccionprincipal .submenu a:hover {
+  color: #009d71;
+}
+
 .seccionprincipal .descrip {
+  margin: 1%;
+  padding: 2%;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: descripcion;
+  font-family: 'Sen', sans-serif;
+  color: #066d8b;
 }
 
 .seccionprincipal .imgdescrip {
@@ -90,11 +124,33 @@ header h1 {
   grid-area: imagen;
 }
 
+.seccionprincipal .imgdescrip img {
+  border-radius: 5%;
+  width: 350px;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
+.seccionprincipal .imgdescrip img:hover {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+
 .seccionprincipal .menudetalle {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: menudetalle;
+  margin: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Road Rage', cursive;
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,5 +162,10 @@ header h1 {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.imgdescrip {
+  border-radius: 5%;
+  margin: 1%;
 }
 /*# sourceMappingURL=main.css.map */
